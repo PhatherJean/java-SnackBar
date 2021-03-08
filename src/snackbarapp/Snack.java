@@ -11,6 +11,7 @@ public class Snack
 	private int vendingMachineId;
 
 	public Snack(String name, int quantity, double cost, int vendingMachineId)
+	
 	{
 		maxId++;
 		this.name = name;
@@ -39,7 +40,7 @@ public class Snack
 		return cost;
 	}
 
-	public void setCost()
+	public void setCost(double cost)
 	{
 		this.cost = cost;
 	}
@@ -54,15 +55,17 @@ public class Snack
 		this.quantity = this.quantity + quantity;
 	}
 
-	public void setBuySnack(int quantity)
+	public double setBuySnack(int quantity, double cost)
 	{
-		this.quantity = quantity - this.quantity;
+		this.quantity = this.quantity - quantity;
+		return cost * quantity;
 	}
 
-	public void setTotal(double cost, int quantity)
-	{
-		this.cost = cost * quantity;
-	}
+	// public void getTotal()
+	// {
+	// 	return cost * quantity;
+	// }
+
 
 
 
