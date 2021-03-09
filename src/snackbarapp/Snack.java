@@ -74,7 +74,7 @@ public class Snack
 
 	public double getTotal(double cost , int quantity)
 	{
-		return cost * (double)quantity;
+		return cost * quantity;
 	}
 
 

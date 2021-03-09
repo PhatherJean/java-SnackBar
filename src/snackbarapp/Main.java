@@ -1,7 +1,9 @@
 package snackbarapp;
+import java.text.DecimalFormat;
 
 public class Main
 {
+	public static DecimalFormat df = new DecimalFormat("#,##0.00");
 	public static void main(String[] args)
 	{
 		System.out.println("Welcome to your Local Snack Bar");
@@ -60,31 +62,31 @@ public class Main
 		System.out.println("Snack: " + s3.getName());
 		System.out.println("Vending Machine: " + v1.getName());
 		System.out.println("Quantity: " + s3.getQuantity());
-		System.out.println("Total Cost: " + "$"+ s3.getTotal(s3.getCost(), s3.getQuantity()));
+		System.out.println("Total Cost: " + "$"+ df.format(s3.getTotal(s3.getCost(), s3.getQuantity())));
 		System.out.println();
 
 		System.out.println("Snack: " + s4.getName());
 		System.out.println("Vending Machine: " + v1.getName());
 		System.out.println("Quantity: " + s4.getQuantity());
-		System.out.println("Total Cost: " + "$"+ s4.getTotal(s4.getCost(), s4.getQuantity()));
+		System.out.println("Total Cost: " + "$"+ df.format(s4.getTotal(s4.getCost(), s4.getQuantity())));
 		System.out.println();
 
 		System.out.println("Snack: " + s5.getName());
 		System.out.println("Vending Machine: " + v1.getName());
 		System.out.println("Quantity: " + s5.getQuantity());
-		System.out.println("Total Cost: " + "$"+ s5.getTotal(s5.getCost(), s5.getQuantity()));
+		System.out.println("Total Cost: " + "$"+ df.format(s5.getTotal(s5.getCost(), s5.getQuantity())));
 		System.out.println();
 
 		System.out.println("Snack: " + s1.getName());
 		System.out.println("Vending Machine: " + v0.getName());
 		System.out.println("Quantity: " + s1.getQuantity());
-		System.out.println("Total Cost: " + "$"+ s1.getTotal(s1.getCost(), s1.getQuantity()));
+		System.out.println("Total Cost: " + "$"+ df.format(s1.getTotal(s1.getCost(), s1.getQuantity())));
 		System.out.println();
 
 		System.out.println("Snack: " + s2.getName());
 		System.out.println("Vending Machine: " + v0.getName());
 		System.out.println("Quantity: " + s2.getQuantity());
-		System.out.println("Total Cost: " + "$"+ s2.getTotal(s2.getCost(), s2.getQuantity()));
+		System.out.println("Total Cost: " + "$"+ df.format(s2.getTotal(s2.getCost(), s2.getQuantity())));
 		System.out.println();
 
 	}	
