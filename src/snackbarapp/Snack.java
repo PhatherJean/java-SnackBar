@@ -2,7 +2,7 @@ package snackbarapp;
 
 public class Snack
 {
-	private static int maxId;
+	private static int maxId = 0;
 
 	private int id;
 	private String name;
@@ -14,6 +14,7 @@ public class Snack
 	
 	{
 		maxId++;
+		id = maxId;
 		this.name = name;
 		this.quantity = quantity;
 		this.cost = cost;
@@ -55,16 +56,26 @@ public class Snack
 		this.quantity = this.quantity + quantity;
 	}
 
-	public double setBuySnack(int quantity, double cost)
+	public void setBuySnack(int quantity)
 	{
 		this.quantity = this.quantity - quantity;
-		return cost * quantity;
+	
 	}
 
-	// public void getTotal()
-	// {
-	// 	return cost * quantity;
-	// }
+	public int getVendingMachineId()
+	{
+		return vendingMachineId;
+	}
+
+	public void setVendingMachineId(int vendingMachineId)
+	{
+		this.vendingMachineId = vendingMachineId;
+	}
+
+	public double getTotal(double cost , int quantity)
+	{
+		return cost * (double)quantity;
+	}
 
 
 

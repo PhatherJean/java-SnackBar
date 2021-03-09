@@ -1,4 +1,4 @@
-package snackbarrapp;
+package snackbarapp;
 
 public class Customer
 {
@@ -42,7 +42,7 @@ public class Customer
 		this.cashOnHand = cashOnHand + this.cashOnHand;
 	}
 
-	public void setRemainingCash(double cashOnHand, double cost)
+	public void setRemainingCash(double cost)
 	{
 		this.cashOnHand = this.cashOnHand - cost;
 	}
